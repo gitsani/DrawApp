@@ -1,4 +1,4 @@
-package fhku.drawapp;
+package fhku.drawgame;
 
 /**
  * Created by Alexandra on 11.01.2018.
@@ -39,7 +39,7 @@ public class DrawingView extends View {
     }
 
     private void setupDrawing() {
-        brushSize = getResources().getInteger(R.integer.medium_size);
+        brushSize = getResources().getInteger(R.integer.small_size);
         lastBrushSize = brushSize;
 
         drawPath = new Path();
@@ -115,10 +115,10 @@ public class DrawingView extends View {
         else drawPaint.setXfermode(null);
     }
 
-//    public void clearCanvas() {
-//        drawPath.reset();
-//        invalidate();
-//    }
+    public void clearCanvas() {
+        drawPath.reset();
+        invalidate();
+    }
 
     private void upTouch() {
         drawPath.lineTo(mX, mY);
@@ -145,4 +145,5 @@ public class DrawingView extends View {
         }
         return true;
     }
+
 }

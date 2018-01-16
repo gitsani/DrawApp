@@ -1,4 +1,4 @@
-package fhku.drawapp;
+package fhku.drawgame;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

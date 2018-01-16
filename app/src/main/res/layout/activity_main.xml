@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fhku.drawapp.MainActivity"
+    tools:context="fhku.drawgame.MainActivity"
     android:background="#d3d3d3"
     android:orientation="vertical">
 
@@ -21,6 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:contentDescription="@string/start_new"
+            android:onClick="clearCanvas"
             android:src="@drawable/new_pic" />
 
         <ImageButton
@@ -46,7 +47,7 @@
 
     </LinearLayout>
 
-    <fhku.drawapp.DrawingView
+    <fhku.drawgame.DrawingView
         android:id="@+id/drawing"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -173,27 +174,4 @@
 
     </LinearLayout>
 
-    <!--<Button-->
-    <!--android:id="@+id/btn_color"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="top|left"-->
-    <!--android:onClick="clearCanvas"-->
-    <!--android:text="@string/btn_color" />-->
-
-    <!--<Button-->
-    <!--android:id="@+id/btn_size"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="top|center"-->
-    <!--android:onClick="clearCanvas"-->
-    <!--android:text="@string/btn_size" />-->
-
-    <!--<Button-->
-    <!--android:id="@+id/btn_delete"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="top|right"-->
-    <!--android:onClick="clearCanvas"-->
-    <!--android:text="@string/btn_delete" />-->
 </LinearLayout>

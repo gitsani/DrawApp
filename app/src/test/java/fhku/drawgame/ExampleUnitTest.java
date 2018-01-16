@@ -1,4 +1,4 @@
-package fhku.drawapp;
+package fhku.drawgame;
 
 import org.junit.Test;
 

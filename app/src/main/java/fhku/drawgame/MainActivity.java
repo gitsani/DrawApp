@@ -1,4 +1,4 @@
-package fhku.drawapp;
+package fhku.drawgame;
 
 import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         drawBtn = findViewById(R.id.draw_btn);
         drawBtn.setOnClickListener(this);
 
-        eraseBtn = (ImageButton) findViewById(R.id.erase_btn);
+        eraseBtn = findViewById(R.id.erase_btn);
         eraseBtn.setOnClickListener(this);
 
     }
@@ -125,8 +125,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-//    public void clearCanvas(View v) {
-//        drawView.clearCanvas();
-//    }
+    public void clearCanvas(View v) {
+        drawView.clearCanvas();
+    }
 
 }
