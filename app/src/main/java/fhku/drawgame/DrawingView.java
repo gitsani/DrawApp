@@ -103,7 +103,7 @@ public class DrawingView extends View {
         drawCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
         invalidate();
     }
-    
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {

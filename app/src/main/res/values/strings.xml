@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">Draw Game</string>
+    <string name="submit">Submit</string>
 
     <!--Icons-->
     <string name="start_new">New</string>

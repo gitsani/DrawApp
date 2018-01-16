@@ -20,6 +20,8 @@
             android:id="@+id/new_btn"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
+            android:background="#d3d3d3"
+            android:layout_margin="5dp"
             android:contentDescription="@string/start_new"
             android:src="@drawable/new_pic" />
 
@@ -27,6 +29,8 @@
             android:id="@+id/draw_btn"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
+            android:background="#d3d3d3"
+            android:layout_margin="5dp"
             android:contentDescription="@string/brush"
             android:src="@drawable/draw" />
 
@@ -34,6 +38,8 @@
             android:id="@+id/erase_btn"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
+            android:background="#d3d3d3"
+            android:layout_margin="5dp"
             android:contentDescription="@string/erase"
             android:src="@drawable/erase" />
 
@@ -41,6 +47,8 @@
             android:id="@+id/save_btn"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
+            android:background="#d3d3d3"
+            android:layout_margin="5dp"
             android:contentDescription="@string/save"
             android:src="@drawable/save" />
 
@@ -168,11 +176,39 @@
         android:id="@+id/drawing"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="3dp"
         android:layout_weight="1"
         android:background="#FFFFFFFF" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/guess_drawing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Guess the drawing..." />
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/submit"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
