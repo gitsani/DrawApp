@@ -39,7 +39,7 @@ public class DrawingView extends View {
     }
 
     private void setupDrawing() {
-        brushSize = getResources().getInteger(R.integer.small_size);
+        brushSize = getResources().getInteger(R.integer.medium_size);
         lastBrushSize = brushSize;
 
         drawPath = new Path();
@@ -71,22 +71,6 @@ public class DrawingView extends View {
         canvas.drawPath(drawPath, drawPaint);
     }
 
-    private void startTouch(float x, float y) {
-        drawPath.moveTo(x, y);
-        mX = x;
-        mY = y;
-    }
-
-    private void moveTouch(float x, float y) {
-        float dx = Math.abs(x - mX);
-        float dy = Math.abs(y - mY);
-        if (dx >= TOLERANCE || dy >= TOLERANCE) {
-            drawPath.quadTo(mX, mY, (x + mX) / 2, (y + mY) / 2);
-            mX = x;
-            mY = y;
-        }
-    }
-
     public void setColor(String newColor) {
         invalidate();
         paintColor = Color.parseColor(newColor);
@@ -115,34 +99,32 @@ public class DrawingView extends View {
         else drawPaint.setXfermode(null);
     }
 
-    public void clearCanvas() {
-        drawPath.reset();
+    public void startNew(){
+        drawCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
         invalidate();
     }
-
-    private void upTouch() {
-        drawPath.lineTo(mX, mY);
-    }
+    
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        float x = event.getX();
-        float y = event.getY();
+        float touchX = event.getX();
+        float touchY = event.getY();
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                startTouch(x, y);
-                invalidate();
+                drawPath.moveTo(touchX, touchY);
                 break;
             case MotionEvent.ACTION_MOVE:
-                moveTouch(x, y);
-                invalidate();
+                drawPath.lineTo(touchX, touchY);
                 break;
             case MotionEvent.ACTION_UP:
-                upTouch();
-                invalidate();
+                drawCanvas.drawPath(drawPath, drawPaint);
+                drawPath.reset();
                 break;
+            default:
+                return false;
         }
+        invalidate();
         return true;
     }
 
