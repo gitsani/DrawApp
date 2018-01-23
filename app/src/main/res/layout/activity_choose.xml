@@ -1,6 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="fhku.drawgame.ChooseActivity"
+    >
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars = "vertical"
+        android:scrollbarStyle="insideInset"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context="fhku.uebung4.Uebung4">
+
+            <TextView
+                android:id="@+id/text"
+                android:textSize="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAlignment="center"
+                android:text="Choose Your Drawing!"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:textColor="#e50000"
+
+                />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textAlignment="center"
+                android:fontFamily="casual"
+                android:textColor="#ff4c4c"
+                android:text="(Scroll down for more Words)"/>
+
+
+            <Button
+                android:id="@+id/cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cat"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/dog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dog"
+                android:layout_below="@+id/button"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Car"
+                android:layout_below="@+id/button2"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/mouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mouse"
+                android:layout_below="@+id/button3"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/plane"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plane"
+                android:layout_below="@+id/button4"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/bird"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bird"
+                android:layout_below="@+id/button5"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/moon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moon"
+                android:layout_below="@+id/button3"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/burger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Burger"
+                android:layout_below="@+id/button7"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/crown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crown"
+                android:layout_below="@+id/button8"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/pineapple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pineapple"
+                android:layout_below="@+id/button9"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/laptop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Laptop"
+                android:layout_below="@+id/button10"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/ketchup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ketchup"
+                android:layout_below="@+id/button11"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/toothbrush"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toothbrush"
+                android:layout_below="@+id/button12"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/clown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clown"
+                android:layout_below="@+id/button13"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/golf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Golf"
+                android:layout_below="@+id/button14"
+                android:background="@drawable/button_rot"
+                />
+
+            <Button
+                android:id="@+id/alien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alien"
+                android:layout_below="@+id/button15"
+                android:background="@drawable/button_rot"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
