@@ -7,10 +7,11 @@
     android:layout_height="match_parent"
     tools:context="fhku.drawgame.MainActivity"
     android:background="#d3d3d3"
+    android:id="@+id/activity_main_layout"
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/innerLayout"
+        android:id="@+id/inner_layout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -44,6 +45,15 @@
             android:src="@drawable/erase" />
 
         <ImageButton
+            android:id="@+id/undo_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="#d3d3d3"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/undo"
+            android:src="@drawable/undo" />
+
+        <ImageButton
             android:id="@+id/save_btn"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -53,7 +63,6 @@
             android:src="@drawable/save" />
 
     </LinearLayout>
-
 
 
     <LinearLayout
@@ -199,13 +208,20 @@
                 android:id="@+id/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Guess the drawing..." />
+                android:hint="Guess the drawing ..."
+                android:inputType="text"/>
 
             <Button
                 android:id="@+id/submit_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/submit"/>
+
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
 
         </LinearLayout>
 

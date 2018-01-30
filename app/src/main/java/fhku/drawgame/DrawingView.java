@@ -11,26 +11,27 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.TypedValue;
 
+import java.util.ArrayList;
+
 public class DrawingView extends View {
 
-    public int width;
-    public int height;
+    Context context;
     private Bitmap canvasBitmap;
     private Canvas drawCanvas;
     private Path drawPath;
-    Context context;
     private Paint drawPaint, canvasPaint;
     private int paintColor = 0xFFFFCC00;
-    private float mX, mY;
-    private static final float TOLERANCE = 5;
     private float brushSize, lastBrushSize;
     private boolean erase = false;
+    private ArrayList<Path> paths = new ArrayList<Path>();
+    private ArrayList<Path> undonePaths = new ArrayList<Path>();
 
     public DrawingView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -39,12 +40,12 @@ public class DrawingView extends View {
     }
 
     private void setupDrawing() {
+        drawPath = new Path();
+        drawPaint = new Paint();
+
         brushSize = getResources().getInteger(R.integer.medium_size);
         lastBrushSize = brushSize;
 
-        drawPath = new Path();
-
-        drawPaint = new Paint();
         drawPaint.setColor(paintColor);
         drawPaint.setAntiAlias(true);
         drawPaint.setStrokeWidth(brushSize);
@@ -77,6 +78,7 @@ public class DrawingView extends View {
         drawPaint.setColor(paintColor);
     }
 
+    //Change size of drawing pen
     public void setBrushSize(float newSize) {
         float pixelAmount = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 newSize, getResources().getDisplayMetrics());
@@ -92,6 +94,7 @@ public class DrawingView extends View {
         return lastBrushSize;
     }
 
+    //Erase button method
     public void setErase(boolean isErase) {
         erase = isErase;
 
@@ -99,12 +102,23 @@ public class DrawingView extends View {
         else drawPaint.setXfermode(null);
     }
 
+    //New image button
     public void startNew(){
         drawCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
         invalidate();
     }
 
+    //Undo last drawing button
+    public void onClickUndo () {
+        if (paths.size()>0)  {
+            undonePaths.add(paths.remove(paths.size()-1));
+            invalidate();
+        } else  {
+            Log.i("undo", "Undo elsecondition");
+        }
+    }
 
+    //Drawing gestures
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         float touchX = event.getX();
