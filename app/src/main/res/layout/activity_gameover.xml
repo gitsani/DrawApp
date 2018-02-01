@@ -13,11 +13,11 @@
 
         <TextView
             android:id="@+id/wonlost"
-            android:text="You "
-            android:textSize="30dp"
+            android:textSize="30sp"
+            android:text="You guessed :"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            />
 
         <Button
             android:onClick="restart"
@@ -30,7 +30,7 @@
             android:onClick="redo"
             android:id="@+id/redo"
             android:text="Try again"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
     </LinearLayout>

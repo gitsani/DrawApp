@@ -32,7 +32,7 @@ public class ChooseActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.crown).setOnClickListener(this);
         findViewById(R.id.pineapple).setOnClickListener(this);
         findViewById(R.id.laptop).setOnClickListener(this);
-        //findViewById(R.id.ketchup).setOnClickListener(this);
+        findViewById(R.id.ketchup).setOnClickListener(this);
         findViewById(R.id.toothbrush).setOnClickListener(this);
         findViewById(R.id.clown).setOnClickListener(this);
         findViewById(R.id.golf).setOnClickListener(this);
@@ -43,87 +43,74 @@ public class ChooseActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
+        Intent i = new Intent(this,MainActivity.class);
 
         switch (view.getId()) {
             case R.id.cat:
-                Intent i = new Intent(this,MainActivity.class);
-                startActivity(i);
+                i.putExtra("drawing", "cat");
                 break;
 
             case R.id.dog:
-                Intent j = new Intent(this,MainActivity.class);
-                startActivity(j);
+                i.putExtra("drawing", "dog");
                 break;
+
             case R.id.car:
-                Intent k = new Intent(this,MainActivity.class);
-                startActivity(k);
+                i.putExtra("drawing", "car");
                 break;
 
             case R.id.mouse:
-                Intent l = new Intent(this,MainActivity.class);
-                startActivity(l);
+                i.putExtra("drawing", "mouse");
                 break;
 
             case R.id.plane:
-                Intent m = new Intent(this,MainActivity.class);
-                startActivity(m);
+                i.putExtra("drawing", "plane");
                 break;
 
             case R.id.bird:
-                Intent n = new Intent(this,MainActivity.class);
-                startActivity(n);
+                i.putExtra("drawing", "bird");
                 break;
 
             case R.id.moon:
-                Intent o = new Intent(this,MainActivity.class);
-                startActivity(o);
+                i.putExtra("drawing", "moon");
                 break;
 
             case R.id.burger:
-                Intent p = new Intent(this,MainActivity.class);
-                startActivity(p);
+                i.putExtra("drawing", "burger");
                 break;
 
             case R.id.crown:
-                Intent q = new Intent(this,MainActivity.class);
-                startActivity(q);
+                i.putExtra("drawing", "crown");
                 break;
 
             case R.id.pineapple:
-                Intent r = new Intent(this,MainActivity.class);
-                startActivity(r);
+                i.putExtra("drawing", "pineapple");
                 break;
 
             case R.id.laptop:
-                Intent s = new Intent(this,MainActivity.class);
-                startActivity(s);
+                i.putExtra("drawing", "laptop");
                 break;
 
-           /* case R.id.ketchup:
-                Intent t = new Intent(this,MainActivity.class);
-                startActivity(t);
-                break;*/
+            case R.id.ketchup:
+                i.putExtra("drawing", "ketchup");
+                break;
 
             case R.id.toothbrush:
-                Intent u = new Intent(this,MainActivity.class);
-                startActivity(u);
+                i.putExtra("drawing", "toothbrush");
                 break;
 
             case R.id.clown:
-                Intent v = new Intent(this,MainActivity.class);
-                startActivity(v);
+                i.putExtra("drawing", "clown");
                 break;
 
             case R.id.golf:
-                Intent w = new Intent(this,MainActivity.class);
-                startActivity(w);
+                i.putExtra("drawing", "golf");
                 break;
 
             case R.id.alien:
-                Intent x = new Intent(this,MainActivity.class);
-                startActivity(x);
+                i.putExtra("drawing", "alien");
                 break;
         }
+        startActivity(i);
 
         }
 }
