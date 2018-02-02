@@ -225,6 +225,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("guess", false);
                 startActivity(intent);
                 // tv.setText("You guessed wrong! \n Try again?");
+
             }
         } else if (view.getId() == R.id.undo_btn) {
             drawView.onClickUndo();

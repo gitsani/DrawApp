@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -17,15 +19,29 @@ import android.widget.Toast;
 public class GameOverActivity extends AppCompatActivity implements View.OnClickListener {
 
     private boolean guess;
+    TextView wonlost;
+    EditText text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameover);
 
+        wonlost = findViewById(R.id.wonlost);
+        text = findViewById(R.id.edittext);
+
+
         guess = getIntent().getBooleanExtra("guess", false);
         Log.i("GAME OVER", "result: " + guess);
+
+        if (guess == true) {
+            wonlost.setText("You guessed the word: "+ text);
+        }else {
+            wonlost.setText("You guessed wrong!");
+        }
     }
+
+
 
     public void onClick(View view) {
 
