@@ -21,6 +21,7 @@ public class GameOverActivity extends AppCompatActivity implements View.OnClickL
     private boolean guess;
     TextView wonlost;
     EditText text;
+    private Button restart, redo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,63 +31,49 @@ public class GameOverActivity extends AppCompatActivity implements View.OnClickL
         wonlost = findViewById(R.id.wonlost);
         text = findViewById(R.id.edittext);
 
+        restart = findViewById(R.id.restart);
+        restart.setOnClickListener(this);
+        redo = findViewById(R.id.redo);
+        redo.setOnClickListener(this);
+
+
 
         guess = getIntent().getBooleanExtra("guess", false);
         Log.i("GAME OVER", "result: " + guess);
 
         if (guess == true) {
             wonlost.setText("You guessed the word: "+ text);
+
         }else {
             wonlost.setText("You guessed wrong!");
+            redo.setVisibility(View.VISIBLE);
+
         }
+
+
     }
 
 
 
     public void onClick(View view) {
 
-        restart();
+        if (view.getId() == R.id.restart) {
+            Intent i = new Intent(this,ChooseActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            finish();
+            startActivity(i);
+
+        }else if (view.getId() == R.id.redo) {
+            Intent j = new Intent(this,MainActivity.class);
+            j.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+            j.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            finish();
+
+        }
+
 
     }
 
-    public void restart() {
 
-        Intent i = new Intent(this, MainActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        finish();
-        startActivity(i);
-
-    }
-
-    public void redo() {
-        Intent i = new Intent(this, MainActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        finish();
-        startActivity(i);
-
-    }
-
-//    @Override
-//    public void onClick(View view) {
-//
-//         if (view.getId() == R.id.restart) {
-//             Intent i = new Intent(this, StartActivity.class);
-//             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//             finish();
-//             startActivity(i);
-//            }
-//
-//            else if (view.getId() == R.id.redo) {
-//             Intent i = new Intent(this, MainActivity.class);
-//             i.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
-//             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//             finish();
-//             startActivity(i);
-//
-//        }
-//
-//    }
 }

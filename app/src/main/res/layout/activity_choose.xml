@@ -48,6 +48,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cat"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_centerVertical="true"
                 android:background="@drawable/button_rot"
                 />
@@ -57,6 +60,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dog"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button"
                 android:background="@drawable/button_rot"
                 />
@@ -66,6 +72,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Car"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button2"
                 android:background="@drawable/button_rot"
                 />
@@ -75,6 +84,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mouse"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button3"
                 android:background="@drawable/button_rot"
                 />
@@ -84,6 +96,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Plane"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button4"
                 android:background="@drawable/button_rot"
                 />
@@ -93,6 +108,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Bird"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button5"
                 android:background="@drawable/button_rot"
                 />
@@ -102,6 +120,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Moon"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button3"
                 android:background="@drawable/button_rot"
                 />
@@ -111,6 +132,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Burger"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button7"
                 android:background="@drawable/button_rot"
                 />
@@ -120,6 +144,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Crown"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button8"
                 android:background="@drawable/button_rot"
                 />
@@ -129,6 +156,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pineapple"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button9"
                 android:background="@drawable/button_rot"
                 />
@@ -138,6 +168,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Laptop"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button10"
                 android:background="@drawable/button_rot"
                 />
@@ -147,6 +180,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ketchup"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button11"
                 android:background="@drawable/button_rot"
                 />
@@ -156,6 +192,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Toothbrush"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button12"
                 android:background="@drawable/button_rot"
                 />
@@ -165,6 +204,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Clown"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button13"
                 android:background="@drawable/button_rot"
                 />
@@ -174,6 +216,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Golf"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button14"
                 android:background="@drawable/button_rot"
                 />
@@ -183,6 +228,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Alien"
+                android:textColor="#ffff"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:layout_below="@+id/button15"
                 android:background="@drawable/button_rot"
                 />
