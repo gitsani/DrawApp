@@ -97,12 +97,19 @@ public class DrawingView extends View {
         return lastBrushSize;
     }
 
+
     //Erase button method
     public void setErase(boolean isErase) {
-        erase = isErase;
+        this.erase = isErase;
+        if (isErase) {
+            drawPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+        }else {
+            drawPaint.setXfermode(null);
+        }
+        //erase = isErase;
 
-        if (erase) drawPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
-        else drawPaint.setXfermode(null);
+//        if (erase) drawPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+//        else drawPaint.setXfermode(null);
     }
 
     //New image button
@@ -187,7 +194,15 @@ public class DrawingView extends View {
                 drawPath.moveTo(touchX, touchY);
                 break;
             case MotionEvent.ACTION_MOVE:
-                drawPath.lineTo(touchX, touchY);
+                if (erase) {
+                    drawPath.lineTo(touchX, touchY);
+                    drawCanvas.drawPath(drawPath, drawPaint);
+                    drawPath.reset();
+                    drawPath.moveTo(touchX, touchY);
+                } else {
+
+                    drawPath.lineTo(touchX, touchY);
+                }
                 break;
             case MotionEvent.ACTION_UP:
                 drawCanvas.drawPath(drawPath, drawPaint);
