@@ -2,15 +2,12 @@ package fhku.drawgame;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by Melanie on 23.01.2018.
@@ -54,7 +51,6 @@ public class GameOverActivity extends AppCompatActivity implements View.OnClickL
 
 
     }
-
 
 
     public void onClick(View view) {
