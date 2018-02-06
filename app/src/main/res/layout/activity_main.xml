@@ -45,15 +45,6 @@
             android:src="@drawable/erase" />
 
         <ImageButton
-            android:id="@+id/undo_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:background="#d3d3d3"
-            android:layout_margin="5dp"
-            android:contentDescription="@string/undo"
-            android:src="@drawable/undo" />
-
-        <ImageButton
             android:id="@+id/save_btn"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"

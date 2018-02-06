@@ -57,52 +57,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //save drawing to gallery chooseBtn
         saveBtn = findViewById(R.id.save_btn);
         saveBtn.setOnClickListener(this);
-        //undo the last drawing chooseBtn
-        undoBtn = findViewById(R.id.undo_btn);
-        undoBtn.setOnClickListener(this);
+
 
         submitBtn = findViewById(R.id.submit_btn);
         submitBtn.setOnClickListener(this);
         mEdit = findViewById(R.id.edittext);
         mEdit.setOnClickListener(this);
 
-        //LayoutIflater (to use more than 1 xml in MainActivity.java)
-        LayoutInflater in= getLayoutInflater();
-        View  v = in.inflate(R.layout.activity_choose, null);
-
-        chooseBtn = v.findViewById(R.id.cat);
-        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.dog);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.car);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.mouse);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.plane);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.moon);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.burger);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.crown);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.pineapple);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.laptop);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.toothbrush);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.clown);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.golf);
-//        chooseBtn.setOnClickListener(this);
-//        chooseBtn = v.findViewById(R.id.alien);
-//        chooseBtn.setOnClickListener(this);
-
-        View  v1 = in.inflate(R.layout.activity_gameover, null);
-        tv = v1.findViewById(R.id.wonlost);
-        tv.setOnClickListener(this);
-        tv.setMovementMethod(new ScrollingMovementMethod());
     }
 
     public void paintClicked(View view) {
@@ -211,27 +172,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             newDialog.show();
         } else if (view.getId() == R.id.submit_btn) {
             mEdit = findViewById(R.id.edittext);
-            //tv.setText("You guessed: \n" + mEdit.getText().toString());
             String guessedText = mEdit.getText().toString().toLowerCase();
 
             if (drawing.equals(guessedText)) {
                 Intent intent = new Intent(this, GameOverActivity.class);
                 intent.putExtra("guess", true);
+                intent.putExtra("word", mEdit.getText().toString());
                 startActivity(intent);
-                // tv.setText("You guessed: \n" + guessedText + "\n That's correct!");
-            }
-            else {
+            } else {
                 Intent intent = new Intent(this, GameOverActivity.class);
                 intent.putExtra("guess", false);
                 startActivity(intent);
-                // tv.setText("You guessed wrong! \n Try again?");
-
             }
-        } else if (view.getId() == R.id.undo_btn) {
-            drawView.onClickUndo();
-        }
 
-        else if (view.getId() == R.id.save_btn) {
+        } else if (view.getId() == R.id.save_btn) {
             AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
             saveDialog.setTitle("Save drawing");
             saveDialog.setMessage("Save drawing to your device's Gallery?");

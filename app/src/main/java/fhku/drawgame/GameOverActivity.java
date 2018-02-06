@@ -42,7 +42,9 @@ public class GameOverActivity extends AppCompatActivity implements View.OnClickL
         Log.i("GAME OVER", "result: " + guess);
 
         if (guess == true) {
-            wonlost.setText("You guessed the word: "+ text);
+            Intent intent = getIntent();
+            String str = intent.getStringExtra("word");
+            wonlost.setText("You guessed the word: "+ str);
 
         }else {
             wonlost.setText("You guessed wrong!");
