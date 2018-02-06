@@ -44,6 +44,7 @@ public class GameOverActivity extends AppCompatActivity implements View.OnClickL
         if (guess == true) {
             Intent intent = getIntent();
             String str = intent.getStringExtra("word");
+            str = str.substring(0,1).toUpperCase() + str.substring(1).toLowerCase();
             wonlost.setText("You guessed the word: "+ str);
 
         }else {
