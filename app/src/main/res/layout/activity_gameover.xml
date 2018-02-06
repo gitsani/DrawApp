@@ -3,14 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fhku.drawgame.GameOverActivity">
+    tools:context="fhku.drawgame.GameOverActivity"
+    android:background="#fff7f7">
 
 
 
         <TextView
             android:id="@+id/wonlost"
             android:textSize="30sp"
-            android:text=""
+            android:text="You guessed wrong!"
             android:textColor="#e50000"
             android:fontFamily="casual"
             android:textStyle="bold"

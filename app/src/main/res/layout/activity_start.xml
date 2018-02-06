@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="fhku.drawgame.StartActivity"
-    android:background="@drawable/farbeimer">
+    android:background="@drawable/haha">
 
 
 
@@ -15,7 +15,7 @@
         android:fontFamily="monospace"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:textColor="#e50000"
+        android:textColor="#920"
         android:background="@drawable/button_blau"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         android:textAlignment="center"
         android:textSize="50dp"
         android:textStyle="bold"
-        android:textColor="#ffff"
+        android:textColor="#fff4f4"
         android:layout_above="@id/startbutton"
         android:layout_marginBottom="70dp"
         android:layout_centerHorizontal="true"
