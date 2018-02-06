@@ -34,7 +34,6 @@ public class GameOverActivity extends AppCompatActivity implements View.OnClickL
         redo.setOnClickListener(this);
 
 
-
         guess = getIntent().getBooleanExtra("guess", false);
         Log.i("GAME OVER", "result: " + guess);
 
@@ -49,7 +48,6 @@ public class GameOverActivity extends AppCompatActivity implements View.OnClickL
             redo.setVisibility(View.VISIBLE);
 
         }
-
 
     }
 
@@ -71,8 +69,6 @@ public class GameOverActivity extends AppCompatActivity implements View.OnClickL
 
         }
 
-
     }
-
 
 }

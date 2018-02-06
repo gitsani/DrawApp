@@ -54,12 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         saveBtn = findViewById(R.id.save_btn);
         saveBtn.setOnClickListener(this);
 
-
         submitBtn = findViewById(R.id.submit_btn);
         submitBtn.setOnClickListener(this);
         mEdit = findViewById(R.id.edittext);
         mEdit.setOnClickListener(this);
-
     }
 
     public void paintClicked(View view) {
