@@ -307,7 +307,7 @@
                 android:id="@+id/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Guess the drawing ..."
+                android:hint="Player 2: Guess the drawing!"
                 android:inputType="text"/>
 
             <Button

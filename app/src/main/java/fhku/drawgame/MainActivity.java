@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         drawing = getIntent().getStringExtra("drawing");
 
+        //highlight current chosen color
         drawView = findViewById(R.id.drawing);
         LinearLayout paintLayout = findViewById(R.id.paint_colors);
         currPaint = (ImageButton) paintLayout.getChildAt(0);
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //save drawing to gallery chooseBtn
         saveBtn = findViewById(R.id.save_btn);
         saveBtn.setOnClickListener(this);
-
+        //Guess drawing and display guess in GameOverActivity (if it was right)
         submitBtn = findViewById(R.id.submit_btn);
         submitBtn.setOnClickListener(this);
         mEdit = findViewById(R.id.edittext);
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (view.getId() == R.id.draw_btn) {
             final Dialog brushDialog = new Dialog(this);
-            brushDialog.setTitle("Pen size:");
+            brushDialog.setTitle("Select pen size:");
             brushDialog.setContentView(R.layout.brush_chooser);
 
             ImageButton smallBtn = brushDialog.findViewById(R.id.small_brush);
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             drawView.setBrushSize(smallBrush);
         } else if (view.getId() == R.id.erase_btn) {
             final Dialog brushDialog = new Dialog(this);
-            brushDialog.setTitle("Eraser size:");
+            brushDialog.setTitle("Select eraser size:");
             brushDialog.setContentView(R.layout.brush_chooser);
 
             ImageButton smallBtn = brushDialog.findViewById(R.id.small_brush);

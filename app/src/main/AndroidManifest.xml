@@ -20,8 +20,12 @@
             </intent-filter>
         </activity>
         <activity android:name="fhku.drawgame.ChooseActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".GameOverActivity" ></activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".GameOverActivity"
+            android:screenOrientation="portrait"
+        />
     </application>
 
 </manifest>
